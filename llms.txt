@@ -1179,6 +1179,7 @@ LogRecord	type	@spy4x/platform/server	One log record: the caller's event plus a 
 NodeChildProcess	interface	@spy4x/platform/server	The subset of `node:child_process` and `node:os` that nodeSpawner uses.
 NodeNet	interface	@spy4x/platform/server	`node:net`, as far as nodeTcpConnect uses it.
 NodeSocket	interface	@spy4x/platform/server	One `node:net` socket, as far as nodeTcpConnect uses it.
+OsSignal	type	@spy4x/platform/server	An operating-system signal name.
 ReadJsonOptions	interface	@spy4x/platform/server	Options of readJsonFile.
 ReadJsonResult	type	@spy4x/platform/server	Result of reading a JSON document.
 ReminderNotifyResult	type	@spy4x/platform/server	What `notify` says about one reminder:
@@ -1255,6 +1256,7 @@ WalkEntry	interface	@spy4x/platform/server/ports	A single directory entry, as re
 WriteTextOptions	interface	@spy4x/platform/server/ports	Options of FileSystemPort.writeText, `writeBytes` and `writeStream`.
 systemClockPort	constant	@spy4x/platform/server/ports	Deprecated: Use `systemClock` from `@spy4x/platform/universal/time`. The host clock.
 EnvReader	interface	@spy4x/platform/server/process	Reads environment values.
+OsSignal	type	@spy4x/platform/server/process	An operating-system signal name.
 StandardInput	interface	@spy4x/platform/server/process	The process's standard input, for a command-line script: a hidden password prompt in raw mode, or text piped in.
 exitProcess	function	@spy4x/platform/server/process	End the process now with exit `code`: `Deno.exit` on Deno, `process.exit` on Node and Bun.
 processArgs	function	@spy4x/platform/server/process	The command-line arguments after the script: `Deno.args` on Deno, `process.argv` without the runtime and script paths on Node and Bun.
@@ -3033,4 +3035,4 @@ firstIssueMessage	function	@spy4x/validation/validate	First issue message in a v
 isArkErrors	function	@spy4x/validation/validate	Whether a value is an arktype rejection, without relying on `instanceof`.
 toValidationError	function	@spy4x/validation/validate	Build a ValidationError from arktype's issues.
 validate	function	@spy4x/validation/validate	Parse `value` with an arktype schema exactly once.
-# export surface: sha256 424e12d6b4c476d7d8ed26b90be90b982fadf1129e4f4667b791077c5542a9f5
+# export surface: sha256 1c84598d8bb1adaa1d6c1761537f4469439f9a64177f9a9cb77960b5488cb2f5
