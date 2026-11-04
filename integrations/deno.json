@@ -1,6 +1,6 @@
 {
   "name": "@spy4x/integrations",
-  "version": "1.111.0",
+  "version": "1.112.0",
   "exports": {
     ".": "./mod.ts",
     "./webhooks": "./webhooks.ts",
@@ -8,6 +8,7 @@
     "./healthchecks": "./healthchecks.ts",
     "./cloudflare": "./cloudflare.ts",
     "./indexnow": "./indexnow.ts",
+    "./devto": "./devto.ts",
     "./umami": "./umami.ts",
     "./push": "./push.ts",
     "./push-file-store": "./push-file-store.ts",
