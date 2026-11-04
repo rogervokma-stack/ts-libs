@@ -9,6 +9,7 @@ BillingErrorCode	type	@spy4x/billing	Why a request to the provider failed.
 BillingEvent	type	@spy4x/billing	A verified webhook delivery, in provider-neutral terms.
 BillingEventRejectReason	type	@spy4x/billing	Why a delivery was refused: the signature check's reasons, or a payload it cannot read.
 BillingEventType	enum	@spy4x/billing	What happened, as the discriminant of BillingEvent.
+BillingPeriod	enum	@spy4x/billing	How often a price bills.
 BillingProvider	interface	@spy4x/billing	One payment provider behind one interface.
 CancelAtPeriodEndRequest	interface	@spy4x/billing	What BillingProvider.setCancelAtPeriodEnd needs.
 CancelRequest	interface	@spy4x/billing	What BillingProvider.cancelNow needs.
@@ -2935,4 +2936,4 @@ firstIssueMessage	function	@spy4x/validation/validate	First issue message in a v
 isArkErrors	function	@spy4x/validation/validate	Whether a value is an arktype rejection, without relying on `instanceof`.
 toValidationError	function	@spy4x/validation/validate	Build a ValidationError from arktype's issues.
 validate	function	@spy4x/validation/validate	Parse `value` with an arktype schema exactly once.
-# export surface: sha256 2f76f80b20d1bd137fadbb9e7dc36d356cabdf5d66f168193a05c27ede83beef
+# export surface: sha256 b8ec3a849f9dd9daec0e858f6614fbbb1f9a3f036b7263c2c28f89f89871b19a
