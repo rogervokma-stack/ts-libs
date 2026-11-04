@@ -2535,9 +2535,12 @@ StaticFs	interface	@spy4x/server/static	Filesystem surface the static handler ne
 StaticPathResolution	type	@spy4x/server/static	Result of resolving a request path against the static root.
 StaticRejection	type	@spy4x/server/static	Why a request path was refused.
 contentTypeFor	function	@spy4x/server/static	Content type for a path, from its extension, case-insensitively.
-denoStaticFs	constant	@spy4x/server/static	Filesystem implementation backed by `Deno.*`, used when none is injected.
+denoStaticFs	constant	@spy4x/server/static	Filesystem implementation backed by `Deno.*`, the default on Deno.
 isPathInsideRoot	function	@spy4x/server/static	True when `candidate` is inside `root`.
+nodeStaticFs	constant	@spy4x/server/static	Filesystem implementation over `node:fs/promises`, for Node and Bun (Bun implements Node's `fs`).
 resolveStaticPath	function	@spy4x/server/static	Join a request pathname to a static root, refusing anything that could escape it.
+runtimeStaticFs	constant	@spy4x/server/static	The files of the running runtime: denoStaticFs on Deno, nodeStaticFs on Node and Bun.
+serveFile	function	@spy4x/server/static	Answer `request` with the file at `path`, on Deno, Node and Bun: the runtime-neutral counterpart of `serveFile` from `@std/http/file-server`.
 serveStatic	function	@spy4x/server/static	Serve one request path from the static root.
 BucketStorage	interface	@spy4x/server/storage	A `FileStorage` provider bound to one bucket, with the bucket argument removed.
 DEFAULT_EXPIRES_IN_SECONDS	constant	@spy4x/server/storage	Fallback URL lifetime, and the ceiling S3 itself enforces.
@@ -3035,4 +3038,4 @@ firstIssueMessage	function	@spy4x/validation/validate	First issue message in a v
 isArkErrors	function	@spy4x/validation/validate	Whether a value is an arktype rejection, without relying on `instanceof`.
 toValidationError	function	@spy4x/validation/validate	Build a ValidationError from arktype's issues.
 validate	function	@spy4x/validation/validate	Parse `value` with an arktype schema exactly once.
-# export surface: sha256 1c84598d8bb1adaa1d6c1761537f4469439f9a64177f9a9cb77960b5488cb2f5
+# export surface: sha256 4eff1790f5eda54ea843a3b75747ac0b68a75ea383bbe5b7ee727ebdadf34dd1
